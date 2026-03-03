@@ -85,16 +85,11 @@ class AdariHarsha:
 ![ParaView](https://img.shields.io/badge/ParaView-blue?style=for-the-badge&logoColor=white)
 
 </div>
-
----
-
-## 📊 GitHub Stats
-
+📬 Get In Touch
 <div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Adari-Harsha&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=0e7490&icon_color=0e7490" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adari-Harsha&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=0e7490" height="165"/>
-
+Show Image
+Show Image
+Always open to collaboration on CFD, numerical methods, or simulation projects!
 </div>
 
 
