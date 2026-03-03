@@ -97,20 +97,6 @@ class AdariHarsha:
 
 </div>
 
----
-
-## 📬 Get In Touch
-
-<div align="center">
-
-[![GitHub](https://img.shields.io/badge/GitHub-Adari--Harsha-181717?style=for-the-badge&logo=github)](https://github.com/Adari-Harsha)
-[![University](https://img.shields.io/badge/Universität_Koblenz-Germany-003399?style=for-the-badge)](https://www.uni-koblenz.de)
-
-*Always open to collaboration on FEM, CFD, numerical methods, or simulation projects!
-
-</div>
-
----
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0e7490&height=80&section=footer"/>
