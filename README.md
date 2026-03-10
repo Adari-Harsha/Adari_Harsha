@@ -32,19 +32,7 @@ class AdariHarsha:
         self.currently   = "Exploring mesh generation & turbulence modelling in OpenFOAM"
         self.goal        = "Build simulations that bridge math and real-world engineering"
 ```
-
----
-
-## 🔬 What I Work On
-
-| Domain | Tools & Methods |
-|---|---|
-| 🌊 **Computational Fluid Dynamics** | OpenFOAM, FVM, blockMesh, icoFoam, simpleFoam |
-| 🧮 **Finite Element Methods** | FEniCS, mixed formulations, Navier-Stokes |
-| 📐 **Numerical Schemes** | FDM, FVM, Euler method, Runge-Kutta |
-| 🧬 **Mathematical Modelling** | SIR models, integro-differential equations |
-| ⚙️ **Topology Optimization** | Structural optimization methods |
-| 🐍 **Scientific Computing** | Python, NumPy, Matplotlib, Jupyter |
+|
 
 ---
 
@@ -84,8 +72,7 @@ class AdariHarsha:
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![ParaView](https://img.shields.io/badge/ParaView-blue?style=for-the-badge&logoColor=white)
 
-</div>
-Get in Touch 
+</div> 
 <div align="center">
 Always open to collaboration on CFD, numerical methods, or simulation projects!
 </div>
