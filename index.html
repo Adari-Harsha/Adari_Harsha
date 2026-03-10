@@ -54,59 +54,32 @@
     .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 4vw, 46px); color: var(--text); font-weight: 700; letter-spacing: -1px; }
     .section-line { flex: 1; height: 1px; background: var(--border); max-width: 180px; }
 
-    /* SHARED PROJECT STYLES */
+    /* SHARED */
     .project-list { display: flex; flex-direction: column; gap: 2px; }
-    .proj-num { font-size: 10px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; opacity: 0.65; }
-    .proj-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 14px; }
-    .proj-desc { font-size: 13px; color: var(--muted); line-height: 1.85; margin-bottom: 18px; }
     .proj-highlights { list-style: none; margin-bottom: 26px; }
     .proj-highlights li { font-size: 12px; color: var(--muted); padding: 3px 0 3px 18px; position: relative; }
     .proj-highlights li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 10px; top: 5px; }
-    .proj-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
     .tech-pills { display: flex; gap: 6px; flex-wrap: wrap; }
     .pill { font-size: 10px; padding: 3px 9px; border: 1px solid var(--border); color: var(--muted); border-radius: 2px; }
     .proj-link { color: var(--muted); text-decoration: none; font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; display: flex; align-items: center; gap: 6px; transition: all 0.2s; white-space: nowrap; border: 1px solid var(--border); padding: 7px 14px; border-radius: 2px; }
     .proj-link:hover { color: var(--accent); border-color: rgba(0,229,255,0.3); }
+    .proj-desc { font-size: 13px; color: var(--muted); line-height: 1.85; margin-bottom: 18px; }
 
-    /* SIMPLE PROJECT CARD */
-    .project-item { display: grid; grid-template-columns: 1fr 1fr; background: var(--bg); border: 1px solid var(--border); overflow: hidden; transition: border-color 0.3s; }
-    .project-item:hover { border-color: rgba(0,229,255,0.25); }
-    .project-item:nth-child(even) { direction: rtl; }
-    .project-item:nth-child(even) > * { direction: ltr; }
-    .project-visual { position: relative; overflow: hidden; min-height: 320px; display: flex; align-items: center; justify-content: center; background: var(--bg3); }
-    .project-visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
-    .project-item:hover .project-visual img { transform: scale(1.04); }
-    .gif-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: linear-gradient(135deg, #0f1318 0%, #141920 100%); }
-    .project-visual.has-gif .gif-placeholder { display: none; }
-    .placeholder-icon { font-size: 44px; opacity: 0.2; }
-    .placeholder-label { font-size: 10px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; text-align: center; max-width: 160px; line-height: 1.7; opacity: 0.5; }
-    .corner-frame { position: absolute; inset: 20px; pointer-events: none; border: 1px dashed rgba(0,229,255,0.1); }
-    .corner-frame::before, .corner-frame::after { content: ''; position: absolute; width: 18px; height: 18px; border-style: solid; border-color: rgba(0,229,255,0.3); }
-    .corner-frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
-    .corner-frame::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
-    .gif-placeholder::after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(0,229,255,0.15), transparent); animation: scan 3s ease-in-out infinite; }
-    @keyframes scan { 0%{top:20%;opacity:0} 20%{opacity:1} 80%{opacity:1} 100%{top:80%;opacity:0} }
-    .project-info { padding: 44px 48px; display: flex; flex-direction: column; justify-content: center; }
-
-    /* RICH PROJECT CARD (Topology) */
+    /* RICH CARD */
     .project-item-rich { border: 1px solid var(--border); background: var(--bg); overflow: hidden; transition: border-color 0.3s; }
     .project-item-rich:hover { border-color: rgba(0,229,255,0.25); }
-
     .rich-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 32px; border-bottom: 1px solid var(--border); background: var(--bg3); flex-wrap: wrap; gap: 12px; }
     .rich-header-left { display: flex; align-items: center; gap: 16px; }
     .proj-num-inline { font-size: 10px; letter-spacing: 3px; color: var(--accent); opacity: 0.65; text-transform: uppercase; }
     .rich-title { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
     .rich-header-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-
     .rich-body { display: grid; grid-template-columns: 1.15fr 0.85fr; min-height: 480px; }
-
     .rich-media { border-right: 1px solid var(--border); display: flex; flex-direction: column; background: #060810; }
     .media-main { flex: 1; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 320px; }
     .media-main img { width: 100%; height: 100%; object-fit: contain; display: block; transition: opacity 0.25s ease; }
     .media-label-bar { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 16px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); display: flex; align-items: center; justify-content: space-between; }
     .media-badge { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25); padding: 3px 8px; border-radius: 2px; }
     .media-caption { font-size: 11px; color: rgba(255,255,255,0.55); }
-
     .thumb-strip { display: flex; border-top: 1px solid var(--border); overflow-x: auto; }
     .thumb-strip::-webkit-scrollbar { height: 3px; }
     .thumb-strip::-webkit-scrollbar-thumb { background: rgba(0,229,255,0.2); }
@@ -119,7 +92,6 @@
     .thumb:hover img, .thumb.active img { opacity: 1; }
     .thumb span { font-size: 9px; color: var(--muted); text-align: center; line-height: 1.4; }
     .thumb.active span { color: var(--accent); }
-
     .rich-info { padding: 32px 34px; display: flex; flex-direction: column; gap: 22px; overflow-y: auto; }
     .info-blocks { display: flex; flex-direction: column; gap: 20px; }
     .info-block-title { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; opacity: 0.8; }
@@ -129,7 +101,7 @@
     .rstat-label { font-size: 10px; color: var(--muted); margin-top: 4px; }
     .solver-compare { display: flex; flex-direction: column; gap: 9px; }
     .solver-row { display: flex; align-items: center; gap: 10px; }
-    .solver-name { font-size: 11px; color: var(--text); min-width: 42px; }
+    .solver-name { font-size: 11px; color: var(--text); min-width: 52px; }
     .solver-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.07); border-radius: 2px; overflow: hidden; }
     .solver-fill { height: 100%; background: linear-gradient(90deg, var(--accent), rgba(0,229,255,0.4)); border-radius: 2px; }
     .solver-val { font-size: 10px; color: var(--muted); min-width: 90px; text-align: right; }
@@ -150,8 +122,7 @@
     .c-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--muted); font-size: 12px; transition: color 0.2s; }
     .c-link:hover { color: var(--accent); }
     .c-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); min-width: 70px; }
-
-    footer { border-top: 1px solid var(--border); text-align: center; padding: 28px 60px; position: relative; z-index: 1; font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
+    footer { border-top: 1px solid var(--border); text-align: center; padding: 28px 60px; position: relative; z-index: 1; font-size: 11px; color: var(--muted); }
     footer span { color: var(--accent); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
@@ -162,12 +133,10 @@
       nav { padding: 16px 24px; }
       nav ul { display: none; }
       #hero, section { padding-left: 24px; padding-right: 24px; }
-      .project-item, .project-item:nth-child(even) { grid-template-columns: 1fr; direction: ltr; }
-      .project-visual { min-height: 240px; }
-      .project-info { padding: 32px 28px; }
       .rich-body { grid-template-columns: 1fr; }
       .rich-media { border-right: none; border-bottom: 1px solid var(--border); }
       .rich-info { padding: 24px; }
+      .rich-header { padding: 16px 20px; }
       .contact-strip { padding: 40px 24px; flex-direction: column; }
     }
   </style>
@@ -213,7 +182,9 @@
 
       <div class="project-list">
 
-        <!-- PROJECT 1 — TOPOLOGY OPTIMIZATION (rich card) -->
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROJECT 1 — TOPOLOGY OPTIMIZATION       -->
+        <!-- ═══════════════════════════════════════ -->
         <div class="project-item-rich reveal">
           <div class="rich-header">
             <div class="rich-header-left">
@@ -228,7 +199,6 @@
             </div>
           </div>
           <div class="rich-body">
-            <!-- MEDIA SIDE -->
             <div class="rich-media">
               <div class="media-main">
                 <img id="topo-main" src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/cantilever_mma.gif" alt="Topology Optimization" />
@@ -239,32 +209,25 @@
               </div>
               <div class="thumb-strip">
                 <div class="thumb active" onclick="switchMedia('topo-main','https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/cantilever_mma.gif','topo-caption','Cantilever — MMA Solver',this)">
-                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/cantilever_mma.gif" alt="Cantilever MMA" />
-                  <span>Cantilever<br>MMA</span>
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/cantilever_mma.gif" alt="Cantilever MMA" /><span>Cantilever<br>MMA</span>
                 </div>
                 <div class="thumb" onclick="switchMedia('topo-main','https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/cantilever_oc.gif','topo-caption','Cantilever — OC Solver',this)">
-                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/cantilever_oc.gif" alt="Cantilever OC" />
-                  <span>Cantilever<br>OC</span>
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/cantilever_oc.gif" alt="Cantilever OC" /><span>Cantilever<br>OC</span>
                 </div>
                 <div class="thumb" onclick="switchMedia('topo-main','https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/spb_mma.gif','topo-caption','Simply-Supported Beam — MMA',this)">
-                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/spb_mma.gif" alt="SPB MMA" />
-                  <span>Beam<br>MMA</span>
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/spb_mma.gif" alt="SPB MMA" /><span>Beam<br>MMA</span>
                 </div>
                 <div class="thumb" onclick="switchMedia('topo-main','https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/spb_oc.gif','topo-caption','Simply-Supported Beam — OC',this)">
-                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/spb_oc.gif" alt="SPB OC" />
-                  <span>Beam<br>OC</span>
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/assets/spb_oc.gif" alt="SPB OC" /><span>Beam<br>OC</span>
                 </div>
                 <div class="thumb" onclick="switchMedia('topo-main','https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/3d_cant.png','topo-caption','3D Cantilever — Final Result',this)">
-                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/3d_cant.png" alt="3D Cantilever" />
-                  <span>3D<br>Cantilever</span>
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/3d_cant.png" alt="3D Cantilever" /><span>3D<br>Cantilever</span>
                 </div>
                 <div class="thumb" onclick="switchMedia('topo-main','https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/simply.png','topo-caption','Simply-Supported — Final Result',this)">
-                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/simply.png" alt="Simply Supported" />
-                  <span>Simply<br>Supported</span>
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/adariharsha.github.io/main/simply.png" alt="Simply Supported" /><span>Simply<br>Supported</span>
                 </div>
               </div>
             </div>
-            <!-- INFO SIDE -->
             <div class="rich-info">
               <p class="proj-desc">Structural topology optimization finding the most efficient material layout under load constraints — minimizing compliance while maximizing stiffness, implemented in FEniCS for linear and nonlinear elasticity.</p>
               <div class="info-blocks">
@@ -299,128 +262,191 @@
           </div>
         </div>
 
-        <!-- PROJECT 2 -->
-        <div class="project-item reveal">
-          <div class="project-visual">
-            <div class="gif-placeholder">
-              <div class="corner-frame"></div>
-              <div class="placeholder-icon">🌊</div>
-              <div class="placeholder-label">Add lid_driven_cavity.gif</div>
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROJECT 2 — LID-DRIVEN CAVITY FLOW      -->
+        <!-- ═══════════════════════════════════════ -->
+        <div class="project-item-rich reveal">
+          <div class="rich-header">
+            <div class="rich-header-left">
+              <span class="proj-num-inline">02</span>
+              <span class="rich-title">Lid-Driven Cavity Flow</span>
             </div>
-          </div>
-          <div class="project-info">
-            <div class="proj-num">Project 02</div>
-            <div class="proj-title">Lid-Driven Cavity Flow</div>
-            <p class="proj-desc">Mixed finite element simulation of time-dependent Navier-Stokes equations on a unit square mesh using Taylor-Hood elements for stable velocity-pressure coupling.</p>
-            <ul class="proj-highlights">
-              <li>FEniCS mixed FEM formulation</li>
-              <li>Time-dependent Navier-Stokes solver</li>
-              <li>Stable velocity-pressure coupling</li>
-              <li>Visualized with ParaView</li>
-            </ul>
-            <div class="proj-footer">
-              <div class="tech-pills"><span class="pill">Python</span><span class="pill">FEniCS</span><span class="pill">ParaView</span></div>
+            <div class="rich-header-right">
+              <div class="tech-pills">
+                <span class="pill">Python</span><span class="pill">FEniCS</span><span class="pill">OpenFOAM</span><span class="pill">ParaView</span>
+              </div>
               <a href="https://github.com/Adari-Harsha/Lid_Driven_Cavity_Flow-" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
           </div>
-        </div>
-
-        <!-- PROJECT 3 -->
-        <div class="project-item reveal">
-          <div class="project-visual">
-            <div class="gif-placeholder">
-              <div class="corner-frame"></div>
-              <div class="placeholder-icon">🦠</div>
-              <div class="placeholder-label">Add sir_model.gif</div>
+          <div class="rich-body">
+            <div class="rich-media">
+              <div class="media-main">
+                <img id="lid-main" src="https://raw.githubusercontent.com/Adari-Harsha/Lid_Driven_Cavity_Flow-/main/results/Velocity.gif" alt="Lid Driven Cavity" />
+                <div class="media-label-bar">
+                  <span class="media-badge">CFD Simulation</span>
+                  <span class="media-caption" id="lid-caption">Velocity Field</span>
+                </div>
+              </div>
+              <div class="thumb-strip">
+                <div class="thumb active" onclick="switchMedia('lid-main','https://raw.githubusercontent.com/Adari-Harsha/Lid_Driven_Cavity_Flow-/main/results/Velocity.gif','lid-caption','Velocity Field',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/Lid_Driven_Cavity_Flow-/main/results/Velocity.gif" alt="Velocity" /><span>Velocity<br>Field</span>
+                </div>
+                <div class="thumb" onclick="switchMedia('lid-main','https://raw.githubusercontent.com/Adari-Harsha/Lid_Driven_Cavity_Flow-/main/results/Prressure.gif','lid-caption','Pressure Field',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/Lid_Driven_Cavity_Flow-/main/results/Prressure.gif" alt="Pressure" /><span>Pressure<br>Field</span>
+                </div>
+              </div>
+            </div>
+            <div class="rich-info">
+              <p class="proj-desc">Classic CFD benchmark problem — a viscous fluid in a unit square driven by a moving lid. Implemented using mixed finite elements in FEniCS, replicating the OpenFOAM tutorial result from scratch.</p>
+              <div class="info-blocks">
+                <div class="info-block">
+                  <div class="info-block-title">Methods</div>
+                  <ul class="proj-highlights">
+                    <li>Time-dependent Navier-Stokes equations</li>
+                    <li>Taylor-Hood mixed FEM (P2/P1) elements</li>
+                    <li>Newton solver with MUMPS direct linear solver</li>
+                    <li>No-slip walls + moving lid boundary condition</li>
+                  </ul>
+                </div>
+                <div class="info-block">
+                  <div class="info-block-title">Simulation Setup</div>
+                  <div class="result-stats">
+                    <div class="rstat"><div class="rstat-num">50×50</div><div class="rstat-label">Mesh resolution</div></div>
+                    <div class="rstat"><div class="rstat-num">0.01</div><div class="rstat-label">Kinematic viscosity</div></div>
+                    <div class="rstat"><div class="rstat-num">T=2.0</div><div class="rstat-label">Simulation time</div></div>
+                    <div class="rstat"><div class="rstat-num">dt=0.01</div><div class="rstat-label">Time step</div></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <div class="proj-num">Project 03</div>
-            <div class="proj-title">Spatial SIR Epidemic Model</div>
-            <p class="proj-desc">Spatially explicit SIR model with non-homogeneous mixing via kernel-based integration. Simulates disease spread in 1D and 2D with localized lockdown interventions.</p>
-            <ul class="proj-highlights">
-              <li>Integro-differential equations with Euler method</li>
-              <li>1D and 2D spatial disease propagation</li>
-              <li>Dynamic lockdown & variable transmission rates</li>
-            </ul>
-            <div class="proj-footer">
-              <div class="tech-pills"><span class="pill">Python</span><span class="pill">NumPy</span><span class="pill">Plotly</span></div>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROJECT 3 — SIR EPIDEMIC MODEL          -->
+        <!-- ═══════════════════════════════════════ -->
+        <div class="project-item-rich reveal">
+          <div class="rich-header">
+            <div class="rich-header-left">
+              <span class="proj-num-inline">03</span>
+              <span class="rich-title">Spatial SIR Epidemic Model</span>
+            </div>
+            <div class="rich-header-right">
+              <div class="tech-pills">
+                <span class="pill">Python</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span>
+              </div>
               <a href="https://github.com/Adari-Harsha/SIR_Modelling_via_Integro_Differential_Equations_in_Spatial_Variables" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
           </div>
-        </div>
-
-        <!-- PROJECT 4 -->
-        <div class="project-item reveal">
-          <div class="project-visual">
-            <div class="gif-placeholder">
-              <div class="corner-frame"></div>
-              <div class="placeholder-icon">📈</div>
-              <div class="placeholder-label">Add finite_volume.gif</div>
+          <div class="rich-body">
+            <div class="rich-media">
+              <div class="media-main">
+                <img id="sir-main" src="https://raw.githubusercontent.com/Adari-Harsha/SIR_Modelling_via_Integro_Differential_Equations_in_Spatial_Variables/main/results/1D_infections.gif" alt="SIR Model" />
+                <div class="media-label-bar">
+                  <span class="media-badge">Epidemic Simulation</span>
+                  <span class="media-caption" id="sir-caption">1D — Infection & Recovery Spread</span>
+                </div>
+              </div>
+              <div class="thumb-strip">
+                <div class="thumb active" onclick="switchMedia('sir-main','https://raw.githubusercontent.com/Adari-Harsha/SIR_Modelling_via_Integro_Differential_Equations_in_Spatial_Variables/main/results/1D_infections.gif','sir-caption','1D — Infection & Recovery Spread',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/SIR_Modelling_via_Integro_Differential_Equations_in_Spatial_Variables/main/results/1D_infections.gif" alt="1D" /><span>1D<br>Spread</span>
+                </div>
+                <div class="thumb" onclick="switchMedia('sir-main','https://raw.githubusercontent.com/Adari-Harsha/SIR_Modelling_via_Integro_Differential_Equations_in_Spatial_Variables/main/results/infection_animation_2d.gif','sir-caption','2D — Center Origin Spread',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/SIR_Modelling_via_Integro_Differential_Equations_in_Spatial_Variables/main/results/infection_animation_2d.gif" alt="2D Center" /><span>2D<br>Center</span>
+                </div>
+                <div class="thumb" onclick="switchMedia('sir-main','https://raw.githubusercontent.com/Adari-Harsha/SIR_Modelling_via_Integro_Differential_Equations_in_Spatial_Variables/main/results/edge cases 2d.gif','sir-caption','2D — Corner Edge Cases',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/SIR_Modelling_via_Integro_Differential_Equations_in_Spatial_Variables/main/results/edge cases 2d.gif" alt="2D Edge" /><span>2D<br>Corners</span>
+                </div>
+              </div>
+            </div>
+            <div class="rich-info">
+              <p class="proj-desc">Spatially explicit SIR model using integro-differential equations with a kernel-based interaction approach. Simulates how infections propagate across 1D and 2D spatial domains with intervention strategies.</p>
+              <div class="info-blocks">
+                <div class="info-block">
+                  <div class="info-block-title">Simulations</div>
+                  <ul class="proj-highlights">
+                    <li>1D: infection seeded between points 50–80 in 200-point domain</li>
+                    <li>2D Center: infection initiated at center of 30×30 grid</li>
+                    <li>2D Corners: infection at all four corners simultaneously</li>
+                    <li>Kernel-based spatial interaction with lockdown control</li>
+                  </ul>
+                </div>
+                <div class="info-block">
+                  <div class="info-block-title">Model Parameters</div>
+                  <div class="result-stats">
+                    <div class="rstat"><div class="rstat-num">β</div><div class="rstat-label">Infection rate</div></div>
+                    <div class="rstat"><div class="rstat-num">γ</div><div class="rstat-label">Recovery rate</div></div>
+                    <div class="rstat"><div class="rstat-num">1D+2D</div><div class="rstat-label">Spatial domains</div></div>
+                    <div class="rstat"><div class="rstat-num">u(t)</div><div class="rstat-label">Lockdown control</div></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <div class="proj-num">Project 04</div>
-            <div class="proj-title">Finite Volume Schemes</div>
-            <p class="proj-desc">Numerical schemes for hyperbolic PDEs in one dimension. Implements Godunov, Lax-Friedrichs, and upwind methods for conservation laws and shock capturing.</p>
-            <ul class="proj-highlights">
-              <li>Hyperbolic PDE discretization in 1D</li>
-              <li>Multiple flux scheme comparisons</li>
-              <li>Shock capturing & conservation validation</li>
-            </ul>
-            <div class="proj-footer">
-              <div class="tech-pills"><span class="pill">Python</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span></div>
+        </div>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROJECT 4 — FINITE VOLUME SCHEMES       -->
+        <!-- ═══════════════════════════════════════ -->
+        <div class="project-item-rich reveal">
+          <div class="rich-header">
+            <div class="rich-header-left">
+              <span class="proj-num-inline">04</span>
+              <span class="rich-title">Finite Volume Schemes</span>
+            </div>
+            <div class="rich-header-right">
+              <div class="tech-pills">
+                <span class="pill">Python</span><span class="pill">NumPy</span><span class="pill">Matplotlib</span>
+              </div>
               <a href="https://github.com/Adari-Harsha/Finite-Volume-Schemes" target="_blank" class="proj-link">GitHub ↗</a>
             </div>
           </div>
-        </div>
-
-        <!-- PROJECT 5 -->
-        <div class="project-item reveal">
-          <div class="project-visual">
-            <div class="gif-placeholder">
-              <div class="corner-frame"></div>
-              <div class="placeholder-icon">📉</div>
-              <div class="placeholder-label">Add finite_difference.gif</div>
+          <div class="rich-body">
+            <div class="rich-media">
+              <div class="media-main">
+                <img id="fv-main" src="https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/upwind scheme.gif" alt="Finite Volume" />
+                <div class="media-label-bar">
+                  <span class="media-badge">Numerical Scheme</span>
+                  <span class="media-caption" id="fv-caption">Upwind Scheme</span>
+                </div>
+              </div>
+              <div class="thumb-strip">
+                <div class="thumb active" onclick="switchMedia('fv-main','https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/upwind scheme.gif','fv-caption','Upwind Scheme',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/upwind scheme.gif" alt="Upwind" /><span>Upwind</span>
+                </div>
+                <div class="thumb" onclick="switchMedia('fv-main','https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/__Lax Freidrich scheme.gif','fv-caption','Lax-Friedrich Scheme',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/__Lax Freidrich scheme.gif" alt="Lax Friedrich" /><span>Lax-<br>Friedrich</span>
+                </div>
+                <div class="thumb" onclick="switchMedia('fv-main','https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/downwind scheme.gif','fv-caption','Downwind Scheme',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/downwind scheme.gif" alt="Downwind" /><span>Downwind</span>
+                </div>
+                <div class="thumb" onclick="switchMedia('fv-main','https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/__Näive scheme.gif','fv-caption','Naïve Scheme',this)">
+                  <img src="https://raw.githubusercontent.com/Adari-Harsha/Finite-Volume-Schemes/main/results/__Näive scheme.gif" alt="Naive" /><span>Naïve</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="project-info">
-            <div class="proj-num">Project 05</div>
-            <div class="proj-title">Finite Difference Schemes</div>
-            <p class="proj-desc">Numerical schemes for parabolic PDEs in one dimension. Covers explicit, implicit, and Crank-Nicolson time integration with stability and convergence analysis.</p>
-            <ul class="proj-highlights">
-              <li>Explicit, implicit & Crank-Nicolson methods</li>
-              <li>Von Neumann stability analysis</li>
-              <li>Heat equation benchmark problems</li>
-            </ul>
-            <div class="proj-footer">
-              <div class="tech-pills"><span class="pill">Python</span><span class="pill">NumPy</span><span class="pill">SciPy</span></div>
-              <a href="https://github.com/Adari-Harsha/Finite-Difference-Schemes" target="_blank" class="proj-link">GitHub ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 6 -->
-        <div class="project-item reveal">
-          <div class="project-visual">
-            <div class="gif-placeholder">
-              <div class="corner-frame"></div>
-              <div class="placeholder-icon">🔢</div>
-              <div class="placeholder-label">Add diff_equations.gif</div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="proj-num">Project 06</div>
-            <div class="proj-title">Differential Equations Solver</div>
-            <p class="proj-desc">A comparative collection of ODE solvers — Runge-Kutta, Adams-Bashforth, shooting method — with error analysis and convergence plots in Jupyter Notebooks.</p>
-            <ul class="proj-highlights">
-              <li>Multiple ODE solver comparisons</li>
-              <li>Error & convergence rate analysis</li>
-              <li>Interactive Jupyter visualizations</li>
-            </ul>
-            <div class="proj-footer">
-              <div class="tech-pills"><span class="pill">Jupyter</span><span class="pill">Python</span><span class="pill">Matplotlib</span></div>
-              <a href="https://github.com/Adari-Harsha/Differential-Equations" target="_blank" class="proj-link">GitHub ↗</a>
+            <div class="rich-info">
+              <p class="proj-desc">Comparison of four numerical schemes for solving the 1D advection equation. Each scheme is visualized as an animation showing how a box-function initial condition evolves over time under different discretization strategies.</p>
+              <div class="info-blocks">
+                <div class="info-block">
+                  <div class="info-block-title">Schemes Compared</div>
+                  <ul class="proj-highlights">
+                    <li>Upwind — stable, diffusive, first-order accurate</li>
+                    <li>Lax-Friedrich — dissipative, stable, entropy-satisfying</li>
+                    <li>Downwind — unstable, illustrates CFL violation</li>
+                    <li>Naïve — central difference, demonstrates instability</li>
+                  </ul>
+                </div>
+                <div class="info-block">
+                  <div class="info-block-title">Setup</div>
+                  <div class="result-stats">
+                    <div class="rstat"><div class="rstat-num">4</div><div class="rstat-label">Schemes compared</div></div>
+                    <div class="rstat"><div class="rstat-num">1D</div><div class="rstat-label">Advection equation</div></div>
+                    <div class="rstat"><div class="rstat-num">[-L,L]</div><div class="rstat-label">Spatial domain</div></div>
+                    <div class="rstat"><div class="rstat-num">CFL</div><div class="rstat-label">Stability analysis</div></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
